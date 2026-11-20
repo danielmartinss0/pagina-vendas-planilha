@@ -1,12 +1,26 @@
-// Insira aqui a URL HTTPS do checkout depois de cadastrar o produto.
+﻿// Cole a URL HTTPS de produção fornecida pela plataforma de pagamento.
 const CHECKOUT_URL = "";
-const comprar = document.getElementById("comprar");
-const aviso = document.getElementById("checkout-notice");
-if (CHECKOUT_URL.startsWith("https://")) {
-  comprar.href = CHECKOUT_URL;
-  comprar.textContent = "Quero minha planilha →";
-  comprar.removeAttribute("aria-disabled");
-  aviso.textContent = "Você será direcionado ao checkout seguro da plataforma de pagamento.";
-} else {
-  comprar.addEventListener("click", (event) => event.preventDefault());
+
+function ativarCompra(valor) {
+  if (!valor.trim()) return;
+
+  let url;
+
+  try {
+    url = new URL(valor);
+  } catch {
+    return;
+  }
+
+  if (url.protocol !== "https:" || url.username || url.password) return;
+
+  const botao = document.getElementById("comprar");
+  const link = document.createElement("a");
+  link.id = botao.id;
+  link.className = botao.className;
+  link.href = url.href;
+  link.textContent = "Quero minha planilha";
+  botao.replaceWith(link);
 }
+
+ativarCompra(CHECKOUT_URL);

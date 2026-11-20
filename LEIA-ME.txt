@@ -1,11 +1,27 @@
-PÁGINA DE VENDAS — IMPULSO DIGITAL IA
+﻿PÁGINA DE VENDAS — IMPULSO DIGITAL IA
 
-1. Abra index.html no navegador para visualizar a página.
-2. Substitua a área de prévia por uma captura real da planilha.
-3. Confirme as informações de entrega, compatibilidade e suporte antes de publicar.
-4. No script.js, cole a URL HTTPS do checkout em CHECKOUT_URL.
-5. No GitHub, crie um repositório público e envie index.html, style.css e script.js para a raiz.
-6. Vá a Settings > Pages > Build and deployment > Deploy from a branch; selecione main e / (root); salve.
-7. Teste o site no celular e faça uma compra de teste no checkout antes de divulgar.
+REVISÃO LOCAL
 
-Não inclua dados financeiros reais nas capturas de tela.
+1. Abra index.html em um navegador. A página usa HTML, CSS e JavaScript sem instalação ou etapa de build.
+2. Confira a imagem promocional em imagens/painel-financeiro.png.png e a legenda “Imagem ilustrativa do produto”.
+3. Confirme o acesso ao arquivo após o pagamento e atualize as respostas sobre entrega no index.html. Confirme também a compatibilidade da planilha e o canal de suporte.
+4. Configure a oferta de R$ 19,90 em pagamento único na Cakto ou Lowify. Cole a URL HTTPS de produção do produto em CHECKOUT_URL no script.js. Deixe a configuração vazia até o checkout estar pronto. A validação local verifica o formato da URL. Confira o produto, o preço e a entrega com uma compra de teste antes de divulgar.
+5. Quando o domínio e a imagem de compartilhamento estiverem disponíveis, complemente o HTML com a URL canônica, og:url e og:image usando URLs absolutas de produção.
+
+CLOUDFLARE PAGES — PROJETO EXISTENTE
+
+1. Aplique os arquivos revisados à cópia do repositório GitHub que já está conectado ao projeto. Inclua a pasta imagens com o PNG promocional.
+2. No Cloudflare, abra Workers & Pages, selecione o projeto existente e confira o repositório, a branch de produção e as configurações de build.
+3. Se precisar ajustar a configuração para os arquivos na raiz, use o preset None, diretório raiz na raiz do repositório, comando de build exit 0 e diretório de saída . (a pasta que contém index.html). Se a página estiver em uma subpasta, use essa subpasta como diretório raiz e mantenha a saída relativa a ela.
+4. Depois da autorização, faça commit e push em uma branch de revisão para gerar um preview, se habilitado. Confira o visual em celular e computador, os links, o painel e o preço. Quando aprovado, integre à branch de produção e confirme o deploy em Deployments.
+5. Abra a URL de produção e confirme o fluxo de compra e entrega antes de divulgar.
+
+PUBLICAÇÃO AUTOMÁTICA — pagina-vendas-planilha
+
+1. Use o repositório danielmartinss0/pagina-vendas-planilha e o ramo main. O Cloudflare Pages publica automaticamente após um push nesse ramo.
+2. Revise as mudanças com git status --short --branch e git diff --cached. Após aprovação, faça o commit e atualize a referência remota com git fetch origin. Confira se main avançou no GitHub antes de executar git push origin main.
+3. Acompanhe a implantação em Workers & Pages > pagina-vendas-planilha > Deployments. O fluxo nativo dispensa o workflow de Wrangler.
+
+Documentação oficial
+https://developers.cloudflare.com/pages/get-started/git-integration/
+https://developers.cloudflare.com/pages/configuration/build-configuration/
