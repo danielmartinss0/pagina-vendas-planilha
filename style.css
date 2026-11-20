@@ -213,7 +213,8 @@ a.btn:hover { background: #ccff7f; }
 .hero-meta span { color: var(--lime); }
 
 .demo {
-  min-width: 0;
+  width: min(100%, 274px);
+  justify-self: center;
   border: 1px solid #47583a;
   border-radius: 20px;
   background: #151a15;
@@ -223,6 +224,7 @@ a.btn:hover { background: #ccff7f; }
 .demo-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 14px 16px;
 }
@@ -255,9 +257,9 @@ a.btn:hover { background: #ccff7f; }
 
 .media video {
   display: block;
-  width: min(100%, 252px);
+  width: 100%;
   aspect-ratio: 9 / 16;
-  background: #0a0c0a;
+  background: radial-gradient(ellipse at center, #1c2419, #0a0c0a 70%);
   object-fit: contain;
 }
 
@@ -434,7 +436,6 @@ details p { padding: 0 0 17px 17px; color: var(--muted); }
   .faq { grid-template-columns: minmax(0, 1fr); }
 
   .hero-copy { max-width: 620px; }
-  .demo { width: min(100%, 670px); }
   .steps { grid-template-columns: minmax(0, 1fr); }
 }
 
