@@ -2,15 +2,21 @@
 
 REVISÃO LOCAL
 
-1. Abra index.html em um navegador. A página usa HTML, CSS e JavaScript sem instalação ou etapa de build.
-2. Confira a imagem promocional em imagens/painel-financeiro.png.png e a legenda “Imagem ilustrativa do produto”.
+1. Abra a pasta do projeto no VS Code e index.html no editor. Com a extensão Live Server instalada, clique em Go Live e abra o endereço local que a extensão indicar. A página usa HTML, CSS e JavaScript sem etapa de build.
+2. A demonstração reproduz videos/demonstracao-planilha.mp4. A imagem WebP é usada como capa e como alternativa se o vídeo não carregar. O PNG original também é usado no compartilhamento.
 3. Confirme o acesso ao arquivo após o pagamento e atualize as respostas sobre entrega no index.html. Confirme também a compatibilidade da planilha e o canal de suporte.
 4. Configure a oferta de R$ 19,90 em pagamento único na Cakto ou Lowify. Cole a URL HTTPS de produção do produto em CHECKOUT_URL no script.js. Deixe a configuração vazia até o checkout estar pronto. A validação local verifica o formato da URL. Confira o produto, o preço e a entrega com uma compra de teste antes de divulgar.
-5. Quando o domínio e a imagem de compartilhamento estiverem disponíveis, complemente o HTML com a URL canônica, og:url e og:image usando URLs absolutas de produção.
+5. Após autorização e confirmação do preço no checkout, altere a oferta em #preco-atual em index.html. O HTML é a fonte do preço mostrado ao visitante.
+
+VÍDEO E MENSURAÇÃO
+
+1. O player vertical usa controles nativos e começa a reprodução por ação do visitante. Para adicionar legendas quando houver um arquivo WebVTT, inclua uma faixa <track kind="captions" srclang="pt-BR"> no elemento #demo-video em index.html e confirme a reprodução no navegador.
+2. Para Meta Pixel ou GA4, use os elementos [data-cta] para identificar cliques informativos e o link [data-event="begin_checkout"] para identificar o início do checkout quando ele estiver habilitado. Leia os parâmetros UTM da URL somente com a configuração de privacidade e consentimento aprovada. A navegação interna preserva a query da página. Nenhum rastreador está instalado.
+3. Registre compra somente após confirmação no checkout ou na integração de pagamento. Valide os eventos e campanhas após configurar os identificadores reais.
 
 CLOUDFLARE PAGES — PROJETO EXISTENTE
 
-1. Aplique os arquivos revisados à cópia do repositório GitHub que já está conectado ao projeto. Inclua a pasta imagens com o PNG promocional.
+1. Aplique os arquivos revisados à cópia do repositório GitHub que já está conectado ao projeto. Inclua as mídias das pastas imagens e videos.
 2. No Cloudflare, abra Workers & Pages, selecione o projeto existente e confira o repositório, a branch de produção e as configurações de build.
 3. Se precisar ajustar a configuração para os arquivos na raiz, use o preset None, diretório raiz na raiz do repositório, comando de build exit 0 e diretório de saída . (a pasta que contém index.html). Se a página estiver em uma subpasta, use essa subpasta como diretório raiz e mantenha a saída relativa a ela.
 4. Depois da autorização, faça commit e push em uma branch de revisão para gerar um preview, se habilitado. Confira o visual em celular e computador, os links, o painel e o preço. Quando aprovado, integre à branch de produção e confirme o deploy em Deployments.

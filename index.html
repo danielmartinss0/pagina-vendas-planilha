@@ -1,66 +1,162 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Organize receitas, despesas, cartões e investimentos com a Planilha de Controle Financeiro Pessoal." />
-  <title>Controle Financeiro Pessoal | Impulso Digital IA</title>
-  <meta name="theme-color" content="#111312" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="Impulso Digital IA" />
-  <meta property="og:title" content="Planilha de Controle Financeiro Pessoal | Impulso Digital IA" />
-  <meta property="og:description" content="Controle receitas, despesas, cartões e investimentos com uma planilha e um painel financeiro automatizado." />
-  <meta name="twitter:card" content="summary" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organize receitas, despesas, cartões e investimentos por mês com a Planilha de Controle Financeiro Pessoal e seu painel automatizado.">
+  <meta name="theme-color" content="#0D0F0E">
+  <title>Planilha de Controle Financeiro Pessoal | Impulso Digital IA</title>
+  <link rel="canonical" href="https://pagina-vendas-planilha.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Impulso Digital IA">
+  <meta property="og:title" content="Planilha de Controle Financeiro Pessoal | Impulso Digital IA">
+  <meta property="og:description" content="Organize seus gastos, acompanhe seus cartões e visualize suas finanças em um só lugar.">
+  <meta property="og:url" content="https://pagina-vendas-planilha.pages.dev/">
+  <meta property="og:image" content="https://pagina-vendas-planilha.pages.dev/imagens/painel-financeiro.png.png">
+  <meta property="og:image:alt" content="Imagem ilustrativa do painel financeiro exibido em um notebook">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
-  <header class="header wrap"><a class="brand" href="#inicio">IMPULSO <span>DIGITAL IA</span></a><a class="header-link" href="#preco">Ver oferta</a></header>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Impulso Digital IA, início">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 6-6 4 4 6-9m-6 0h6v6"/></svg>
+        <span>IMPULSO <strong>DIGITAL IA</strong></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a class="header-link" href="#recursos">Benefícios</a>
+        <a class="header-link header-offer" href="#preco" data-cta="menu_oferta">Ver oferta</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="inicio" tabindex="-1">
-    <section class="hero wrap">
-      <div class="eyebrow">CONTROLE FINANCEIRO PESSOAL</div>
-      <h1>Você sabe para onde vai seu <em>dinheiro</em> todo mês?</h1>
-      <p>Organize receitas, despesas, cartões e investimentos em um só lugar, com uma planilha automatizada e um painel que facilita a visualização das suas finanças.</p>
-      <a class="btn" href="#preco">Conhecer a planilha</a>
-      <figure class="preview">
-        <img src="imagens/painel-financeiro.png.png" width="1672" height="941"
-          alt="Notebook exibindo o painel financeiro da planilha, com gráficos de receitas, despesas e composição dos gastos, além de indicadores de cartões e investimentos"
-          decoding="async" />
-        <figcaption>Imagem ilustrativa do produto</figcaption>
-      </figure>
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Planilha de Controle Financeiro Pessoal</p>
+          <h1 id="titulo">Você sabe para onde vai seu <em>dinheiro todo mês?</em></h1>
+          <p class="hero-lead">Organize seus gastos, acompanhe seus cartões de crédito e visualize suas finanças em um só lugar com uma planilha automatizada.</p>
+          <a class="btn" href="#demonstracao" data-cta="hero_demonstracao">Quero conhecer a planilha</a>
+          <p class="hero-meta">Controle financeiro pessoal <span aria-hidden="true">•</span> Planilha automatizada <span aria-hidden="true">•</span> Pagamento único</p>
+        </div>
+
+        <section class="demo" id="demonstracao" tabindex="-1" aria-labelledby="titulo-demo">
+          <div class="demo-header">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4m-5-8 3-3 3 2 4-5"/></svg>
+            <h2 id="titulo-demo">Painel financeiro</h2>
+          </div>
+          <figure class="preview">
+            <div class="media" id="demo-media">
+              <video id="demo-video" src="videos/demonstracao-planilha.mp4" poster="imagens/painel-financeiro.webp"
+                controls playsinline preload="none" aria-label="Demonstração da Planilha de Controle Financeiro Pessoal">
+                Seu navegador não oferece suporte à reprodução deste vídeo.
+              </video>
+              <picture id="demo-cover" hidden>
+                <source srcset="imagens/painel-financeiro.webp" type="image/webp">
+                <img src="imagens/painel-financeiro.png.png" width="1672" height="941" decoding="async"
+                  alt="Notebook exibindo o painel da planilha, com gráficos de receitas e despesas, composição dos gastos e indicadores de cartões e investimentos">
+              </picture>
+            </div>
+            <figcaption id="demo-caption" aria-live="polite">Vídeo demonstrativo da planilha</figcaption>
+          </figure>
+        </section>
+      </div>
     </section>
-    <section class="section benefits">
+
+    <section class="section benefits" id="recursos" aria-labelledby="titulo-recursos">
       <div class="wrap">
-        <h2>Mais organização para sua rotina</h2>
+        <h2 id="titulo-recursos">Tudo o que você precisa para organizar suas finanças em um só lugar.</h2>
         <div class="cards">
-          <article><h3>Receitas e despesas</h3><p>Registre entradas e saídas e organize suas movimentações por mês.</p></article>
-          <article><h3>Cartões de crédito</h3><p>Visualize compras, parcelas e informações de limite.</p></article>
-          <article><h3>Investimentos</h3><p>Acompanhe seus investimentos em uma área separada.</p></article>
-          <article><h3>Painel automatizado</h3><p>Consulte resumos financeiros em um único lugar.</p></article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16m-3-3 3 3 3-3m7 3V4m-3 3 3-3 3 3"/></svg>
+            <h3>Receitas e despesas</h3>
+            <p>Registre o que entra e o que sai e compare suas movimentações em diferentes meses.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+            <h3>Cartões de crédito</h3>
+            <p>Acompanhe compras, parcelas, faturas e quanto do limite já está comprometido.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 16l5-5 3 3 5-7m-4 0h4v4"/></svg>
+            <h3>Investimentos</h3>
+            <p>Acompanhe seus investimentos em uma área separada do saldo da carteira.</p>
+          </article>
+          <article>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <h3>Painel automatizado</h3>
+            <p>Confira gráficos e indicadores que se atualizam a partir dos seus lançamentos.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="section wrap">
-      <h2>Como funciona?</h2>
-      <ol class="steps">
-        <li>Adquira sua cópia da planilha.</li>
-        <li>Preencha suas informações financeiras.</li>
-        <li>Acompanhe os indicadores no painel.</li>
+
+    <section class="section wrap process" aria-labelledby="titulo-processo">
+      <h2 id="titulo-processo">Como funciona</h2>
+      <ol class="steps" role="list">
+        <li><h3>Adquira a planilha</h3><p>Com o pagamento confirmado, siga as instruções do canal de entrega.</p></li>
+        <li><h3>Registre suas movimentações</h3><p>Preencha receitas, despesas, compras e outras informações financeiras.</p></li>
+        <li><h3>Acompanhe seus indicadores</h3><p>Use o painel para visualizar suas finanças e acompanhar os resultados de cada mês.</p></li>
       </ol>
+      <a class="text-link" href="#preco" data-cta="etapas_oferta">Ver preço e oferta</a>
     </section>
-    <section class="section offer" id="preco">
-      <div class="wrap offer-inner">
-        <h2>Comece a organizar suas finanças</h2>
-        <p>Planilha de Controle Financeiro Pessoal</p>
-        <div class="price">R$ 19,90</div>
-        <p class="small">Pagamento único • Produto digital</p>
-        <button id="comprar" class="btn" type="button" disabled>Compra disponível em breve</button>
+
+    <section class="section offer wrap" id="preco" aria-labelledby="titulo-oferta">
+      <div class="offer-inner">
+        <div>
+          <p class="eyebrow">Planilha de Controle Financeiro Pessoal</p>
+          <h2 id="titulo-oferta">Comece a organizar suas finanças com mais praticidade.</h2>
+          <p>Registre seu dia a dia financeiro e acompanhe o que mudou de um mês para o outro.</p>
+        </div>
+        <div class="purchase">
+          <p class="price" id="preco-atual">R$ 19,90</p>
+          <p class="payment">Pagamento único · Produto digital</p>
+          <button id="comprar" class="btn" type="button" disabled>Compra disponível em breve</button>
+        </div>
       </div>
     </section>
-    <section class="section wrap"><h2>Perguntas frequentes</h2><details><summary>O que recebo após a compra?</summary><p>Uma cópia da Planilha de Controle Financeiro Pessoal. Os detalhes de entrega serão confirmados no checkout.</p></details><details><summary>Preciso entender de fórmulas?</summary><p>A planilha foi criada para facilitar o preenchimento das movimentações e a consulta dos resumos. Consulte as instruções fornecidas com o produto.</p></details><details><summary>Como recebo o produto?</summary><p>O acesso será informado na plataforma de pagamento escolhida, após a configuração da entrega.</p></details></section>
+
+    <section class="section wrap faq" id="perguntas" aria-labelledby="titulo-faq">
+      <h2 id="titulo-faq">Perguntas frequentes</h2>
+      <div>
+        <details>
+          <summary>O que está incluído na planilha?</summary>
+          <p>Uma cópia da Planilha de Controle Financeiro Pessoal com áreas de receitas, despesas, cartões de crédito e investimentos, além do painel de indicadores.</p>
+        </details>
+        <details>
+          <summary>Preciso saber usar fórmulas?</summary>
+          <p>Para o uso cotidiano, basta preencher os campos de lançamento. O painel calcula os indicadores com base nessas informações.</p>
+        </details>
+        <details>
+          <summary>Como funciona o controle de cartões?</summary>
+          <p>Você registra suas compras e acompanha faturas, parcelamentos, limite disponível e o valor já comprometido.</p>
+        </details>
+        <details>
+          <summary>Posso acompanhar meus investimentos?</summary>
+          <p>Sim. A planilha tem uma área própria para seus investimentos, separada do saldo da carteira.</p>
+        </details>
+        <details>
+          <summary>Como recebo o produto após a compra?</summary>
+          <p>O canal de entrega ainda está em definição. As instruções de acesso serão informadas quando a compra estiver disponível.</p>
+        </details>
+        <details>
+          <summary>Em qual aplicativo posso usar a planilha?</summary>
+          <p>A versão atual funciona no Microsoft Excel instalado no computador. A compatibilidade com o Excel na Web, com aplicativos móveis e com outros programas ainda não foi confirmada.</p>
+        </details>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="wrap"><strong>IMPULSO DIGITAL IA</strong><p>Produto digital para organização financeira pessoal.</p><p class="small">Esta planilha é uma ferramenta de organização, não uma recomendação de investimento.</p></div></footer>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#inicio">IMPULSO <strong>DIGITAL IA</strong></a>
+      <p>Ferramenta de organização financeira pessoal. Não constitui recomendação de investimento.</p>
+    </div>
+  </footer>
 </body>
 </html>

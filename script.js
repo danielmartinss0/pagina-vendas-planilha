@@ -19,8 +19,19 @@ function ativarCompra(valor) {
   link.id = botao.id;
   link.className = botao.className;
   link.href = url.href;
+  link.dataset.cta = "oferta_checkout";
+  link.dataset.event = "begin_checkout";
   link.textContent = "Quero minha planilha";
   botao.replaceWith(link);
 }
 
 ativarCompra(CHECKOUT_URL);
+
+const video = document.getElementById("demo-video");
+
+video.addEventListener("error", () => {
+  video.remove();
+  document.getElementById("demo-cover").hidden = false;
+  document.getElementById("demo-caption").textContent =
+    "Vídeo indisponível. Imagem ilustrativa do produto.";
+}, { once: true });
