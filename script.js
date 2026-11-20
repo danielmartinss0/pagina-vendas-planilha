@@ -26,12 +26,3 @@ function ativarCompra(valor) {
 }
 
 ativarCompra(CHECKOUT_URL);
-
-const video = document.getElementById("demo-video");
-
-video.addEventListener("error", () => {
-  video.remove();
-  document.getElementById("demo-cover").hidden = false;
-  document.getElementById("demo-caption").textContent =
-    "Vídeo indisponível. Imagem ilustrativa do produto.";
-}, { once: true });

@@ -213,7 +213,7 @@ a.btn:hover { background: #ccff7f; }
 .hero-meta span { color: var(--lime); }
 
 .demo {
-  width: min(100%, 274px);
+  width: min(100%, 670px);
   justify-self: center;
   border: 1px solid #47583a;
   border-radius: 20px;
@@ -247,20 +247,10 @@ a.btn:hover { background: #ccff7f; }
 }
 
 .media picture { display: block; width: 100%; }
-.media picture[hidden] { display: none; }
-
 .media img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.media video {
-  display: block;
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  background: radial-gradient(ellipse at center, #1c2419, #0a0c0a 70%);
-  object-fit: contain;
 }
 
 .preview figcaption {
