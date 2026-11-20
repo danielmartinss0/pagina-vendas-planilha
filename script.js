@@ -1,5 +1,5 @@
 ﻿// Cole a URL HTTPS de produção fornecida pela plataforma de pagamento.
-const CHECKOUT_URL = "";
+const CHECKOUT_URL = "https://pay.cakto.com.br/vwkk4hc_1323312";
 
 function ativarCompra(valor) {
   if (!valor.trim()) return;
