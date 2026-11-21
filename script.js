@@ -1,5 +1,5 @@
 ﻿// Cole a URL HTTPS de produção fornecida pela plataforma de pagamento.
-const CHECKOUT_URL = "https://pay.cakto.com.br/vwkk4hc_1323312";
+const CHECKOUT_URL = "https://pay.lowify.com.br/checkout?product_id=Jsx0W0";
 
 function ativarCompra(valor) {
   if (!valor.trim()) return;
